@@ -19,6 +19,7 @@ export default function App() {
 
   const doubleTapGesture = Gesture.Tap()
     .numberOfTaps(2)
+    .maxDelay(250)
     .onStart(() => {
       scale.value = withSpring(1, undefined, (finished) => {
         if (finished) {
